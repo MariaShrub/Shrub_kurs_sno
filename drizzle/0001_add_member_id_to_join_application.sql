@@ -1,0 +1,2 @@
+ALTER TABLE "join_application" ADD COLUMN "member_id" uuid;--> statement-breakpoint
+ALTER TABLE "join_application" ADD CONSTRAINT "join_application_member_id_member_id_fk" FOREIGN KEY ("member_id") REFERENCES "public"."member"("id") ON DELETE set null ON UPDATE no action;

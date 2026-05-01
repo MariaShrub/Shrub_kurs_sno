@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: sno-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: sno
+      POSTGRES_PASSWORD: sno
+      POSTGRES_DB: sno
+    ports:
+      - "5440:5432"
+    volumes:
+      - sno-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sno -d sno"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: sno-mailhog
+    restart: unless-stopped
+    ports:
+      - "1025:1025" # SMTP
+      - "8025:8025" # Web UI
+
+volumes:
+  sno-pgdata:
