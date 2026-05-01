@@ -1,0 +1,11 @@
+{
+    "buildCommand": "npm run build",
+    "installCommand": "npm install",
+    "framework": "nextjs",
+    "outputDirectory": ".next",
+    "env": {
+      "BETTER_AUTH_SECRET": "U2FsdGVkX1+7q3pL9mR4sH8tY2kZ5nA7bC0dF1gI3jK5",
+      "NEXTAUTH_SECRET": "U2FsdGVkX1+7q3pL9mR4sH8tY2kZ5nA7bC0dF1gI3jK5",
+      "NEXTAUTH_URL": "https://sno-omgups.vercel.app"
+    }
+  }
