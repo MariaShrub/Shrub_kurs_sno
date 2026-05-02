@@ -81,7 +81,7 @@ pnpm dev
 - **Сайт**: http://localhost:3000
 - **Вход**: http://localhost:3000/login
   - Админ: `admin@sno.local` / `admin123`
-  - Участник: `member@sno.local` / `member123`
+  - Участник: `lilichka@bk.ru` / `member123`
 
 ---
 
