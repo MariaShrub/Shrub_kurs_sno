@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { Providers } from "./providers";
 import MusicPlayer from "@/components/MusicPlayer";
+import GameBot from "@/components/GameBot/GameBot"; 
 
 export const metadata: Metadata = {
   title: "СНО — Студенческое научное общество",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <Providers>
           {children}
           <MusicPlayer />
+          <GameBot /> 
         </Providers>
       </body>
     </html>
